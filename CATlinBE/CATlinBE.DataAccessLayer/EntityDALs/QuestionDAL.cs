@@ -28,7 +28,7 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
                 {
                     Id = Convert.ToInt64(reader["Id"].ToString()),
                     Text = reader["Text"].ToString(),
-                    Image = reader["Image"] != DBNull.Value ? reader["Image"].ToString().ToCharArray().Select(x => (byte)x).ToArray(),
+                    Image = reader["Image"] != DBNull.Value ? reader["Image"].ToString().ToCharArray().Select(x => (byte)x).ToArray() : null,
                     QuestionnaireId = Convert.ToInt32(reader["QuestionnaireId"].ToString()),
                     TimeToAnswer = Convert.ToInt32(reader["TimeToAnswer"].ToString()),
                     Difficulty = (float)Convert.ToDouble(reader["Difficulty"].ToString())

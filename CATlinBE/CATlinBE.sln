@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CATlinBE.Entities", "CATlinBE.Entities\CATlinBE.Entities.csproj", "{6B49BEE2-58C9-45D9-8480-BCB6EB620C1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CATlinBE.DataAccessLayer", "CATlinBE.DataAccessLayer\CATlinBE.DataAccessLayer.csproj", "{BF6125B3-D13E-4F21-A1C9-D5405FB6F431}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CATlinBE.DataAccessLayer", "CATlinBE.DataAccessLayer\CATlinBE.DataAccessLayer.csproj", "{BF6125B3-D13E-4F21-A1C9-D5405FB6F431}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CATlinBE.BusinessLogicLayer", "CATlinBE.BusinessLogicLayer\CATlinBE.BusinessLogicLayer.csproj", "{12A87C44-6F3F-40A9-947A-09E20819CFFE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{BF6125B3-D13E-4F21-A1C9-D5405FB6F431}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF6125B3-D13E-4F21-A1C9-D5405FB6F431}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF6125B3-D13E-4F21-A1C9-D5405FB6F431}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12A87C44-6F3F-40A9-947A-09E20819CFFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12A87C44-6F3F-40A9-947A-09E20819CFFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12A87C44-6F3F-40A9-947A-09E20819CFFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12A87C44-6F3F-40A9-947A-09E20819CFFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

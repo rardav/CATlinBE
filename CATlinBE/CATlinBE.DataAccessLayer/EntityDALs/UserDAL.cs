@@ -3,6 +3,7 @@ using CATlinBE.Entities;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 
 namespace CATlinBE.DataAccessLayer.EntityDALs
 {
@@ -29,7 +30,6 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
                     Email = reader["Email"].ToString(),
                     FirstName = reader["FirstName"].ToString(),
                     LastName = reader["LastName"].ToString(),
-                    Email = reader["Ema"] != DBNull.Value ? reader["Image"].ToString().ToCharArray().Select(x => (byte)x).ToArray(),
                     InstitutionId = Convert.ToInt64(reader["InstitutionId"].ToString()),
                     RoleId = Convert.ToInt64(reader["RoleId"].ToString())
                 };
