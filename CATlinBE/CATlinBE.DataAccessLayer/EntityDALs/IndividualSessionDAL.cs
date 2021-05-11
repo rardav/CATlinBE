@@ -1,5 +1,6 @@
 ﻿using CATlinBE.DataAccessLayer.Interfaces;
 using CATlinBE.Entities;
+using Microsoft.Extensions.Configuration;
 using System.Data;
 
 namespace CATlinBE.DataAccessLayer.EntityDALs

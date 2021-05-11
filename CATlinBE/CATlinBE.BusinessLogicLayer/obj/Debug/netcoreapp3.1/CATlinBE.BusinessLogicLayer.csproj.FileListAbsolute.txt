@@ -1,0 +1,14 @@
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.BusinessLogicLayer\bin\Debug\netcoreapp3.1\CATlinBE.BusinessLogicLayer.deps.json
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.BusinessLogicLayer\bin\Debug\netcoreapp3.1\CATlinBE.BusinessLogicLayer.dll
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.BusinessLogicLayer\bin\Debug\netcoreapp3.1\CATlinBE.BusinessLogicLayer.pdb
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.BusinessLogicLayer\bin\Debug\netcoreapp3.1\CATlinBE.DataAccessLayer.dll
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.BusinessLogicLayer\bin\Debug\netcoreapp3.1\CATlinBE.Entities.dll
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.BusinessLogicLayer\bin\Debug\netcoreapp3.1\CATlinBE.DataAccessLayer.pdb
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.BusinessLogicLayer\bin\Debug\netcoreapp3.1\CATlinBE.Entities.pdb
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.BusinessLogicLayer\obj\Debug\netcoreapp3.1\CATlinBE.BusinessLogicLayer.csprojAssemblyReference.cache
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.BusinessLogicLayer\obj\Debug\netcoreapp3.1\CATlinBE.BusinessLogicLayer.AssemblyInfoInputs.cache
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.BusinessLogicLayer\obj\Debug\netcoreapp3.1\CATlinBE.BusinessLogicLayer.AssemblyInfo.cs
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.BusinessLogicLayer\obj\Debug\netcoreapp3.1\CATlinBE.BusinessLogicLayer.csproj.CoreCompileInputs.cache
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.BusinessLogicLayer\obj\Debug\netcoreapp3.1\CATlinBE.BusinessLogicLayer.csproj.CopyComplete
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.BusinessLogicLayer\obj\Debug\netcoreapp3.1\CATlinBE.BusinessLogicLayer.dll
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.BusinessLogicLayer\obj\Debug\netcoreapp3.1\CATlinBE.BusinessLogicLayer.pdb

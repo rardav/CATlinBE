@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace CATlinBE.BusinessLogicLayer
 {
-    class QuestionnaireBLL
+    public class QuestionnaireBLL
     {
         public IQuestionnaireDAL QuestionnaireDAL { get; set; }
         

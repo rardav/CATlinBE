@@ -7,3 +7,12 @@ D:\University\LICENTA\CATlinBE\CATlinBE.Entities\CATlinBE.Entities\obj\Debug\net
 D:\University\LICENTA\CATlinBE\CATlinBE.Entities\CATlinBE.Entities\obj\Debug\netcoreapp3.1\CATlinBE.Entities.csproj.CoreCompileInputs.cache
 D:\University\LICENTA\CATlinBE\CATlinBE.Entities\CATlinBE.Entities\obj\Debug\netcoreapp3.1\CATlinBE.Entities.dll
 D:\University\LICENTA\CATlinBE\CATlinBE.Entities\CATlinBE.Entities\obj\Debug\netcoreapp3.1\CATlinBE.Entities.pdb
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.Entities\bin\Debug\netcoreapp3.1\CATlinBE.Entities.deps.json
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.Entities\bin\Debug\netcoreapp3.1\CATlinBE.Entities.dll
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.Entities\bin\Debug\netcoreapp3.1\CATlinBE.Entities.pdb
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.Entities\obj\Debug\netcoreapp3.1\CATlinBE.Entities.csprojAssemblyReference.cache
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.Entities\obj\Debug\netcoreapp3.1\CATlinBE.Entities.AssemblyInfoInputs.cache
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.Entities\obj\Debug\netcoreapp3.1\CATlinBE.Entities.AssemblyInfo.cs
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.Entities\obj\Debug\netcoreapp3.1\CATlinBE.Entities.csproj.CoreCompileInputs.cache
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.Entities\obj\Debug\netcoreapp3.1\CATlinBE.Entities.dll
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.Entities\obj\Debug\netcoreapp3.1\CATlinBE.Entities.pdb

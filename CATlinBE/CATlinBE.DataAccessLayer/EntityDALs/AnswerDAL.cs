@@ -1,5 +1,6 @@
 ﻿using CATlinBE.DataAccessLayer.Interfaces;
 using CATlinBE.Entities;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,6 +9,7 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
 {
     public class AnswerDAL : BaseDAL, IAnswerDAL
     {
+
         public List<Answer> GetAllAnswersFromQuestion(long questionId)
         {
             var answers = new List<Answer>();

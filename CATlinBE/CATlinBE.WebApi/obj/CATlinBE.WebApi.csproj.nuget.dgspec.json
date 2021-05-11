@@ -1,0 +1,288 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.WebApi\\CATlinBE.WebApi.csproj": {}
+  },
+  "projects": {
+    "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.BusinessLogicLayer\\CATlinBE.BusinessLogicLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.BusinessLogicLayer\\CATlinBE.BusinessLogicLayer.csproj",
+        "projectName": "CATlinBE.BusinessLogicLayer",
+        "projectPath": "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.BusinessLogicLayer\\CATlinBE.BusinessLogicLayer.csproj",
+        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
+        "outputPath": "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.BusinessLogicLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.DataAccessLayer\\CATlinBE.DataAccessLayer.csproj": {
+                "projectPath": "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.DataAccessLayer\\CATlinBE.DataAccessLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.DataAccessLayer\\CATlinBE.DataAccessLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.DataAccessLayer\\CATlinBE.DataAccessLayer.csproj",
+        "projectName": "CATlinBE.DataAccessLayer",
+        "projectPath": "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.DataAccessLayer\\CATlinBE.DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
+        "outputPath": "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.DataAccessLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.Entities\\CATlinBE.Entities.csproj": {
+                "projectPath": "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.Entities\\CATlinBE.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.Entities\\CATlinBE.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.Entities\\CATlinBE.Entities.csproj",
+        "projectName": "CATlinBE.Entities",
+        "projectPath": "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.Entities\\CATlinBE.Entities.csproj",
+        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
+        "outputPath": "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.WebApi\\CATlinBE.WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.WebApi\\CATlinBE.WebApi.csproj",
+        "projectName": "CATlinBE.WebApi",
+        "projectPath": "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.WebApi\\CATlinBE.WebApi.csproj",
+        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
+        "outputPath": "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.WebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.BusinessLogicLayer\\CATlinBE.BusinessLogicLayer.csproj": {
+                "projectPath": "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.BusinessLogicLayer\\CATlinBE.BusinessLogicLayer.csproj"
+              },
+              "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.Entities\\CATlinBE.Entities.csproj": {
+                "projectPath": "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.Entities\\CATlinBE.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

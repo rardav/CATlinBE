@@ -1,0 +1,12 @@
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.DataAccessLayer\bin\Debug\netcoreapp3.1\CATlinBE.DataAccessLayer.deps.json
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.DataAccessLayer\bin\Debug\netcoreapp3.1\CATlinBE.DataAccessLayer.dll
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.DataAccessLayer\bin\Debug\netcoreapp3.1\CATlinBE.DataAccessLayer.pdb
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.DataAccessLayer\bin\Debug\netcoreapp3.1\CATlinBE.Entities.dll
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.DataAccessLayer\bin\Debug\netcoreapp3.1\CATlinBE.Entities.pdb
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.DataAccessLayer\obj\Debug\netcoreapp3.1\CATlinBE.DataAccessLayer.csprojAssemblyReference.cache
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.DataAccessLayer\obj\Debug\netcoreapp3.1\CATlinBE.DataAccessLayer.AssemblyInfoInputs.cache
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.DataAccessLayer\obj\Debug\netcoreapp3.1\CATlinBE.DataAccessLayer.AssemblyInfo.cs
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.DataAccessLayer\obj\Debug\netcoreapp3.1\CATlinBE.DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.DataAccessLayer\obj\Debug\netcoreapp3.1\CATlinBE.DataAccessLayer.csproj.CopyComplete
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.DataAccessLayer\obj\Debug\netcoreapp3.1\CATlinBE.DataAccessLayer.dll
+D:\University\LICENTA\CATlinBE\CATlinBE\CATlinBE.DataAccessLayer\obj\Debug\netcoreapp3.1\CATlinBE.DataAccessLayer.pdb
