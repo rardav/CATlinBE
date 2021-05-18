@@ -7,5 +7,9 @@ namespace CATlinBE.DataAccessLayer.Interfaces
     {
         List<User> GetAllUsers();
         void InsertUser(User user);
+        void RegisterUser(User user);
+        bool UserExists(string email);
+        User GetUserByEmail(string email);
+        User GetUserById(long id);
     }
 }

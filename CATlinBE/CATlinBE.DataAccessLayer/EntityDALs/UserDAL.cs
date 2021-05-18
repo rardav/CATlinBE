@@ -27,18 +27,35 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
                 var user = new User
                 {
                     Id = Convert.ToInt64(reader["Id"].ToString()),
-                    Username = reader["Username"].ToString(),
+                    //Username = reader["Username"].ToString(),
                     Email = reader["Email"].ToString(),
                     FirstName = reader["FirstName"].ToString(),
                     LastName = reader["LastName"].ToString(),
-                    InstitutionId = Convert.ToInt64(reader["InstitutionId"].ToString()),
-                    RoleId = Convert.ToInt64(reader["RoleId"].ToString())
-                };
+                    PasswordHash = (byte[])reader["PasswordHash"],
+                    PasswordSalt = (byte[])reader["PasswordSalt"]
+                //InstitutionId = Convert.ToInt64(reader["InstitutionId"].ToString()),
+                //RoleId = Convert.ToInt64(reader["RoleId"].ToString())
+            };
                    
                 users.Add(user);
             }
 
             return users;
+        }
+
+        public bool UserExists(string email)
+        {
+            var SQL = "SELECT COUNT(*) FROM Users WHERE email = @email";
+
+            using var sqlConn = GetSqlConnection();
+            using var sqlCmd = GetSqlCommand(SQL, sqlConn);
+
+            sqlCmd.Parameters.Add("email", SqlDbType.VarChar).Value = email;
+            sqlConn.Open();
+
+            var count = (int)sqlCmd.ExecuteScalar();
+
+            return count == 1;
         }
 
         public void InsertUser(User user)
@@ -59,6 +76,80 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
             sqlCmd.Parameters.Add("@RoleId", SqlDbType.BigInt).Value = user.RoleId;
 
             sqlCmd.ExecuteNonQuery();
+        }
+
+        public void RegisterUser(User user)
+        {
+            var SQL = "INSERT INTO Users (Email, FirstName, LastName, PasswordHash, PasswordSalt) VALUES (@Email, @FirstName, @LastName, @PasswordHash, @PasswordSalt)";
+
+            using var sqlConn = GetSqlConnection();
+            using var sqlCmd = GetSqlCommand(SQL, sqlConn);
+
+            sqlConn.Open();
+
+            sqlCmd.Parameters.Add("@Email", SqlDbType.VarChar).Value = user.Email;
+            sqlCmd.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = user.FirstName;
+            sqlCmd.Parameters.Add("@LastName", SqlDbType.VarChar).Value = user.LastName;
+            sqlCmd.Parameters.Add("@PasswordHash", SqlDbType.VarBinary).Value = user.PasswordHash;
+            sqlCmd.Parameters.Add("@PasswordSalt", SqlDbType.VarBinary).Value = user.PasswordSalt;
+
+            sqlCmd.ExecuteNonQuery();
+        }
+
+        public User GetUserByEmail(string email)
+        {
+            var SQL = "SELECT * FROM Users WHERE email = @email";
+
+            using var sqlConn = GetSqlConnection();
+            using var sqlCmd = GetSqlCommand(SQL, sqlConn);
+
+            sqlCmd.Parameters.Add("email", SqlDbType.VarChar).Value = email;
+            sqlConn.Open();
+
+            using var reader = sqlCmd.ExecuteReader();
+            var user = new User();
+            while (reader.Read())
+            {
+                user.Id = Convert.ToInt64(reader["Id"].ToString());
+                //Username = reader["Username"].ToString(),
+                user.Email = reader["Email"].ToString();
+                user.FirstName = reader["FirstName"].ToString();
+                user.LastName = reader["LastName"].ToString();
+                user.PasswordHash = (byte[])reader["PasswordHash"];
+                user.PasswordSalt = (byte[])reader["PasswordSalt"];
+                //InstitutionId = Convert.ToInt64(reader["InstitutionId"].ToString()),
+                //RoleId = Convert.ToInt64(reader["RoleId"].ToString())
+            }
+
+            return user;
+        }
+
+        public User GetUserById(long id)
+        {
+            var SQL = "SELECT * FROM Users WHERE Id = @id";
+
+            using var sqlConn = GetSqlConnection();
+            using var sqlCmd = GetSqlCommand(SQL, sqlConn);
+
+            sqlCmd.Parameters.Add("id", SqlDbType.BigInt).Value = id;
+            sqlConn.Open();
+
+            using var reader = sqlCmd.ExecuteReader();
+            var user = new User();
+            while (reader.Read())
+            {
+                user.Id = Convert.ToInt64(reader["Id"].ToString());
+                //Username = reader["Username"].ToString(),
+                user.Email = reader["Email"].ToString();
+                user.FirstName = reader["FirstName"].ToString();
+                user.LastName = reader["LastName"].ToString();
+                user.PasswordHash = (byte[])reader["PasswordHash"];
+                user.PasswordSalt = (byte[])reader["PasswordSalt"];
+                //InstitutionId = Convert.ToInt64(reader["InstitutionId"].ToString()),
+                //RoleId = Convert.ToInt64(reader["RoleId"].ToString())
+            }
+
+            return user;
         }
     }
 }

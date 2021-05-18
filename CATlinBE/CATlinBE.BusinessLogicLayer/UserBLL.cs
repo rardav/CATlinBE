@@ -1,5 +1,6 @@
 ﻿using CATlinBE.DataAccessLayer.Interfaces;
 using CATlinBE.Entities;
+using System.Collections.Generic;
 
 namespace CATlinBE.BusinessLogicLayer
 {
@@ -12,5 +13,29 @@ namespace CATlinBE.BusinessLogicLayer
             UserDAL.InsertUser(user);
         }
 
+        public void RegisterUser(User user)
+        {
+            UserDAL.RegisterUser(user);
+        }
+
+        public List<User> GetAllUsers()
+        {
+            return UserDAL.GetAllUsers();
+        }
+
+        public bool UserExists(string email)
+        {
+            return UserDAL.UserExists(email);
+        }
+
+        public User GetUserByEmail(string email)
+        {
+            return UserDAL.GetUserByEmail(email);
+        }
+
+        public User GetUserById(long id)
+        {
+            return UserDAL.GetUserById(id);
+        }
     }
 }
