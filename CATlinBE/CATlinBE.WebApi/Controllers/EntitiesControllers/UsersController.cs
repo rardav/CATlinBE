@@ -21,13 +21,13 @@ namespace CATlinBE.WebApi.Controllers.EntitiesControllers
         }
 
         [Authorize]
-        [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUser(long id)
+        [HttpGet("{email}")]
+        public async Task<ActionResult<User>> GetUser(string email)
         {
             return await Task.FromResult(new UserBLL
             {
                 UserDAL = new UserDAL()
-            }.GetUserById(id));
+            }.GetUserByEmail(email));
         }
     }
 }

@@ -22,7 +22,7 @@ namespace CATlinBE.WebApi.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<UserDTO>> Register(RegisterDTO registerDTO)
         {
-            if (await UserExists(registerDTO.Email)) return BadRequest("Username is taken");
+            if (await UserExists(registerDTO.Email)) return BadRequest("This email address is alrady registered.");
 
 
             using var hmac = new HMACSHA512();
