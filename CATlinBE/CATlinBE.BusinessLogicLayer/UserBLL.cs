@@ -37,5 +37,10 @@ namespace CATlinBE.BusinessLogicLayer
         {
             return UserDAL.GetUserById(id);
         }
+
+        public long GetUserIdByEmail(string email)
+        {
+            return UserDAL.GetIdFromEmail(email);
+        }
     }
 }

@@ -7,7 +7,7 @@ using System.Data;
 
 namespace CATlinBE.DataAccessLayer.EntityDALs
 {
-    class AnsweredQuestionDAL : BaseDAL, IAnsweredQuestionDAL
+    public class AnsweredQuestionDAL : BaseDAL, IAnsweredQuestionDAL
     {
         public List<AnsweredQuestion> GetAllAnsweredQuestionsFromIndividualSession(long individualSessionId)
         {
@@ -28,8 +28,8 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
                 {
                     Id = Convert.ToInt64(reader["Id"].ToString()),
                     IndividualSessionId = Convert.ToInt64(reader["IndividualSessionId"].ToString()),
-                    QuestionId = Convert.ToInt64(reader["QuestionId"].ToString()),
-                    HasAnsweredCorrectly = (bool)reader["HasAnsweredCorrectly"],
+                    QuestionDifficulty = (float)Convert.ToDouble(reader["QuestionDifficulty"].ToString()),
+                    AnsweredCorrectly = Convert.ToInt32(reader["AnsweredCorrectly"]),
                     NumberOfOrder = Convert.ToInt32(reader["NumberOfOrder"].ToString())
 
                 };
@@ -41,7 +41,7 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
 
         public void InsertAnsweredQuestion(AnsweredQuestion answeredQuestion)
         {
-            var SQL = "INSERT INTO AnsweredQuestions (IndividualSessionId, QuestionId, HasAnsweredCorrectly, NumberOfOrder) VALUES (@IndividualSessionId, @QuestionId, @HasAnsweredCorrectly, @NumberOfOrder)";
+            var SQL = "INSERT INTO AnsweredQuestions (IndividualSessionId, QuestionDifficulty, AnsweredCorrectly, NumberOfOrder) VALUES (@IndividualSessionId, @QuestionDifficulty, @AnsweredCorrectly, @NumberOfOrder)";
 
             using var sqlConn = GetSqlConnection();
             using var sqlCmd = GetSqlCommand(SQL, sqlConn);
@@ -49,8 +49,8 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
             sqlConn.Open();
 
             sqlCmd.Parameters.Add("@IndividualSessionId", SqlDbType.BigInt).Value = answeredQuestion.IndividualSessionId;
-            sqlCmd.Parameters.Add("@QuestionId", SqlDbType.BigInt).Value = answeredQuestion.QuestionId;
-            sqlCmd.Parameters.Add("@HasAnsweredCorrectly", SqlDbType.Bit).Value = answeredQuestion.HasAnsweredCorrectly;
+            sqlCmd.Parameters.Add("@QuestionDifficulty", SqlDbType.Float).Value = answeredQuestion.QuestionDifficulty;
+            sqlCmd.Parameters.Add("@AnsweredCorrectly", SqlDbType.Int).Value = answeredQuestion.AnsweredCorrectly;
             sqlCmd.Parameters.Add("@NumberOfOrder", SqlDbType.Int).Value = answeredQuestion.NumberOfOrder;
 
             sqlCmd.ExecuteNonQuery();

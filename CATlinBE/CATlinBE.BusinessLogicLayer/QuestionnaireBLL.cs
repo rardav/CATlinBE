@@ -12,5 +12,15 @@ namespace CATlinBE.BusinessLogicLayer
         {
             return QuestionnaireDAL.GetAllQuestionnaires();
         }
+
+        public Questionnaire GetQuestionnaireByURLTitle(string title)
+        {
+            return QuestionnaireDAL.GetQuestionnaireByURLTitle(title);
+        }
+
+        public Questionnaire GetQuestionnaireById(long id)
+        {
+            return QuestionnaireDAL.GetQuestionnaireById(id);
+        }
     }
 }

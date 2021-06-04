@@ -12,5 +12,7 @@ namespace CATlinBE.BusinessLogicLayer
         {
             return InstitutionDAL.GetAllInstitutions();
         }
+
+
     }
 }

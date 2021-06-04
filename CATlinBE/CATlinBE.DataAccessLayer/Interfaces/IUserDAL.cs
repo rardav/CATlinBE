@@ -11,5 +11,6 @@ namespace CATlinBE.DataAccessLayer.Interfaces
         bool UserExists(string email);
         User GetUserByEmail(string email);
         User GetUserById(long id);
+        long GetIdFromEmail(string email);
     }
 }

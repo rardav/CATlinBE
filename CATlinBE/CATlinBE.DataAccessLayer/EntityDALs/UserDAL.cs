@@ -151,5 +151,26 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
 
             return user;
         }
+
+        public long GetIdFromEmail(string email)
+        {
+            var SQL = "SELECT Id FROM Users WHERE email = @email";
+
+            using var sqlConn = GetSqlConnection();
+            using var sqlCmd = GetSqlCommand(SQL, sqlConn);
+
+            sqlCmd.Parameters.Add("email", SqlDbType.VarChar).Value = email;
+            sqlConn.Open();
+
+            using var reader = sqlCmd.ExecuteReader();
+            long id = 0;
+            while (reader.Read())
+            {
+                id = Convert.ToInt64(reader["Id"].ToString());
+            }
+
+            sqlConn.Close();
+            return id;
+        }
     }
 }

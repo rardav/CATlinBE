@@ -5,13 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace CATlinBE.WebApi.Controllers.EntitiesControllers
 { 
     public class QuestionnairesController : BaseAPIController
     {
-        // GET: api/<QuestionnairesController>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Questionnaire>>> GetQuestionnaires()
         {
@@ -20,5 +17,26 @@ namespace CATlinBE.WebApi.Controllers.EntitiesControllers
                 QuestionnaireDAL = new QuestionnaireDAL()
             }.GetAllQuestionnaires());
         }
+
+        [Route("~/api/questionnaires/title/{title}")]
+        public async Task<ActionResult<Questionnaire>> GetQuestionnaire(string title)
+        {
+            return await Task.FromResult(new QuestionnaireBLL
+            {
+                QuestionnaireDAL = new QuestionnaireDAL()
+            }.GetQuestionnaireByURLTitle(title));
+        }
+
+        [Route("~/api/questionnaires/id/{id}")]
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Questionnaire>> GetQuestionnaireById(long id)
+        {
+            return await Task.FromResult(new QuestionnaireBLL
+            {
+                QuestionnaireDAL = new QuestionnaireDAL()
+            }.GetQuestionnaireById(id));
+        }
+
+
     }
 }

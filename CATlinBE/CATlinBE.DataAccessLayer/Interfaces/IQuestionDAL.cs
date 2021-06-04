@@ -6,5 +6,7 @@ namespace CATlinBE.DataAccessLayer.Interfaces
     public interface IQuestionDAL
     {
         List<Question> GetAllQuestionsFromQuestionnaire(long questionnaireId);
+
+        void InsertJSON(List<Question> question);
     }
 }

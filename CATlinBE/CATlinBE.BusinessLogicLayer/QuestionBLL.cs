@@ -12,5 +12,10 @@ namespace CATlinBE.BusinessLogicLayer
         {
             return QuestionDAL.GetAllQuestionsFromQuestionnaire(questionnaireId);
         }
+
+        public void InsertJSON(List<Question> question)
+        {
+            QuestionDAL.InsertJSON(question);
+        }
     }
 }

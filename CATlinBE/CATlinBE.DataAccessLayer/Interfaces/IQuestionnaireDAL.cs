@@ -6,5 +6,7 @@ namespace CATlinBE.DataAccessLayer.Interfaces
     public interface IQuestionnaireDAL
     {
         List<Questionnaire> GetAllQuestionnaires();
+        Questionnaire GetQuestionnaireByURLTitle(string title);
+        Questionnaire GetQuestionnaireById(long id);
     }
 }

@@ -11,5 +11,10 @@ namespace CATlinBE.BusinessLogicLayer
         {
             SessionDAL.InsertSession(session);
         }
+
+        public Session GetSessionById (long id)
+        {
+            return SessionDAL.GetSessionById(id);
+        }
     }
 }

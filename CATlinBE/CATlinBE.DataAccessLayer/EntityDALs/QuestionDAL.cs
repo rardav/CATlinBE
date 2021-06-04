@@ -39,5 +39,52 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
 
             return questions;
         }
+
+        //to delete
+        public void InsertJSON(List<Question> question)
+        {
+            foreach(Question q in question)
+            {
+                var SQL = "INSERT INTO questions(text, questionnaireId, timeToAnswer, difficulty) VALUES (@text, @questionnaireId, @timeToAnswer, @difficulty)";
+
+                using var sqlConn = GetSqlConnection();
+                using var sqlCmd = GetSqlCommand(SQL, sqlConn);
+
+                sqlCmd.Parameters.Add("text", SqlDbType.NVarChar, -1).Value = q.Text;
+                sqlCmd.Parameters.Add("questionnaireId", SqlDbType.BigInt).Value = q.QuestionnaireId;
+                sqlCmd.Parameters.Add("timeToAnswer", SqlDbType.Int).Value = q.TimeToAnswer;
+                sqlCmd.Parameters.Add("difficulty", SqlDbType.Float).Value = q.Difficulty;
+                sqlConn.Open();
+
+                sqlCmd.ExecuteNonQuery();
+                sqlConn.Close();
+            }
+            
+        }
+
+        public Question GetQuestionFromQuestionnaireByDifficulty(long questionnaireId, float difficulty)
+        {
+            var SQL = "SELECT * FROM Questions WHERE questionnaireId = @questionnaireId AND difficulty = @difficulty" ;
+
+            using var sqlConn = GetSqlConnection();
+            using var sqlCmd = GetSqlCommand(SQL, sqlConn);
+
+            sqlCmd.Parameters.Add("questionnaireId", SqlDbType.VarChar).Value = questionnaireId;
+            sqlConn.Open();
+
+            using var reader = sqlCmd.ExecuteReader();
+            var question = new Question();
+            while (reader.Read())
+            {
+                question.Id = Convert.ToInt64(reader["Id"].ToString());
+                question.Text = reader["Text"].ToString();
+                question.Image = reader["Image"] != DBNull.Value ? reader["Image"].ToString().ToCharArray().Select(x => (byte)x).ToArray() : null;
+                question.QuestionnaireId = Convert.ToInt32(reader["QuestionnaireId"].ToString());
+                question.TimeToAnswer = Convert.ToInt32(reader["TimeToAnswer"].ToString());
+                question.Difficulty = (float)Convert.ToDouble(reader["Difficulty"].ToString());
+            }
+
+            return question;
+        }
     }
 }

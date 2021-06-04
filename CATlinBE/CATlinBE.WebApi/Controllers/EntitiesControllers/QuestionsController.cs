@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CATlinBE.BusinessLogicLayer;
+using CATlinBE.DataAccessLayer.EntityDALs;
+using CATlinBE.Entities;
+using CATlinBE.WebApi.DTOs;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,15 +12,39 @@ using System.Threading.Tasks;
 
 namespace CATlinBE.WebApi.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class QuestionsController : ControllerBase
+    public class QuestionsController : BaseAPIController
     {
-        // GET: api/<QuestionsController>
+        [Route("~/api/questionnaires/{id}/questions")]
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<ActionResult<IEnumerable<QuestionDTO>>> GetQuestions(long id)
         {
-            return new string[] { "value1", "value2" };
+            var questions = await Task.Run(() => new QuestionBLL
+            {
+                QuestionDAL = new QuestionDAL()
+            }.GetAllQuestionsFromQuestionnaire(id));
+
+            var questionsDTO = new List<QuestionDTO>();
+            foreach(Question q in questions) {
+                questionsDTO.Add(new QuestionDTO
+                {
+                    Id = q.Id,
+                    Text = q.Text,
+                    TimeToAnswer = q.TimeToAnswer,
+                    Difficulty = q.Difficulty
+                });
+            }
+
+            return questionsDTO;
+        }
+
+
+        [HttpPost]
+        public void InsertJson(List<Question> question)
+        {
+            new QuestionBLL
+            {
+                QuestionDAL = new QuestionDAL()
+            }.InsertJSON(question);
         }
     }
 }
