@@ -100,5 +100,35 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
 
             return id;
         }
+
+        public List<IndividualSession> GetAllIndividualSessionsFromSession(long sessionId)
+        {
+            var sessions = new List<IndividualSession>();
+            var SQL = "SELECT * FROM IndividualSessions WHERE SessionId = @Id";
+
+            using var sqlConn = GetSqlConnection();
+            using var sqlCmd = GetSqlCommand(SQL, sqlConn);
+
+            sqlCmd.Parameters.Add("Id", SqlDbType.BigInt).Value = sessionId;
+            sqlConn.Open();
+
+            using var reader = sqlCmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                var session = new IndividualSession
+                {
+                    Id = Convert.ToInt64(reader["Id"].ToString()),
+                    Ability = (float)Convert.ToDouble(reader["Ability"].ToString()),
+                    StartTime = reader["StartTime"].ToString(),
+                    EndTime = reader["EndTime"].ToString(),
+                    ExamineeId = Convert.ToInt64(reader["ExamineeId"].ToString()),
+                    SessionId = Convert.ToInt64(reader["SessionId"].ToString())
+                };
+                sessions.Add(session);
+            }
+
+            return sessions;
+        }
     }
 }

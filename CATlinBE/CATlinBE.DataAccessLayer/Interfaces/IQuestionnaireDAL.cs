@@ -8,5 +8,6 @@ namespace CATlinBE.DataAccessLayer.Interfaces
         List<Questionnaire> GetAllQuestionnaires();
         Questionnaire GetQuestionnaireByURLTitle(string title);
         Questionnaire GetQuestionnaireById(long id);
+        long GetQuestionnaireIdByURLTitle(string title);
     }
 }

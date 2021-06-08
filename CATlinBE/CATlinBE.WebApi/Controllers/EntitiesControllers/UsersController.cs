@@ -21,13 +21,25 @@ namespace CATlinBE.WebApi.Controllers.EntitiesControllers
         }
 
         [Authorize]
-        [HttpGet("{email}")]
+        [Route("~/api/users/email/{email}")]
+        [HttpGet]
         public async Task<ActionResult<User>> GetUser(string email)
         {
             return await Task.FromResult(new UserBLL
             {
                 UserDAL = new UserDAL()
             }.GetUserByEmail(email));
+        }
+
+        [Authorize]
+        [Route("~/api/users/id/{id}")]
+        [HttpGet]
+        public async Task<ActionResult<User>> GetUserById(long id)
+        {
+            return await Task.FromResult(new UserBLL
+            {
+                UserDAL = new UserDAL()
+            }.GetUserById(id));
         }
 
         [Route("~/api/users/{email}/properties/id")]

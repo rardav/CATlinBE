@@ -9,5 +9,6 @@ namespace CATlinBE.DataAccessLayer.Interfaces
         void UpdateIndividualSession(IndividualSession individualSession);
         List<IndividualSession> GetAllIndividualSessionsFromUser(long userId);
         long GetIdOfIndividualSession(long sessionId, long userId);
+        List<IndividualSession> GetAllIndividualSessionsFromSession(long sessionId);
     }
 }

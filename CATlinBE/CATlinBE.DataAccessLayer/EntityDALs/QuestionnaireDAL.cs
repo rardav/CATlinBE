@@ -29,7 +29,8 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
                     Title = reader["Title"].ToString(),
                     Description = reader["Description"].ToString(),
                     Subject = reader["Subject"].ToString(),
-                    URLTitle = reader["URLTitle"].ToString()
+                    URLTitle = reader["URLTitle"].ToString(),
+                    ImageId = reader.IsDBNull("ImageId")? 0 : Convert.ToInt64(reader["ImageId"].ToString())
                 };
                 questionnaires.Add(questionnaire);
             }
@@ -56,6 +57,7 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
                 questionnaire.Description = reader["Description"].ToString();
                 questionnaire.Subject = reader["Subject"].ToString();
                 questionnaire.URLTitle = reader["URLTitle"].ToString();
+                questionnaire.ImageId = reader.IsDBNull("ImageId") ? 0 : Convert.ToInt64(reader["ImageId"].ToString());
             }
 
             return questionnaire;
@@ -80,11 +82,27 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
                 questionnaire.Description = reader["Description"].ToString();
                 questionnaire.Subject = reader["Subject"].ToString();
                 questionnaire.URLTitle = reader["URLTitle"].ToString();
+                questionnaire.ImageId = reader.IsDBNull("ImageId") ? 0 : Convert.ToInt64(reader["ImageId"].ToString());
             }
 
             return questionnaire;
         }
 
+        public long GetQuestionnaireIdByURLTitle(string title)
+        {
+            var SQL = "SELECT Id FROM Questionnaires WHERE UrlTitle = @title";
 
+            using var sqlConn = GetSqlConnection();
+            using var sqlCmd = GetSqlCommand(SQL, sqlConn);
+
+            sqlCmd.Parameters.Add("title", SqlDbType.NVarChar).Value = title;
+            sqlConn.Open();
+
+            long id = Convert.ToInt64(sqlCmd.ExecuteScalar());
+
+            sqlConn.Close();
+
+            return id;
+        }
     }
 }

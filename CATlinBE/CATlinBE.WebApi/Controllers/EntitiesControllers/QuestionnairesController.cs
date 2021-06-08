@@ -19,12 +19,23 @@ namespace CATlinBE.WebApi.Controllers.EntitiesControllers
         }
 
         [Route("~/api/questionnaires/title/{title}")]
+        [HttpGet("{title}")]
         public async Task<ActionResult<Questionnaire>> GetQuestionnaire(string title)
         {
             return await Task.FromResult(new QuestionnaireBLL
             {
                 QuestionnaireDAL = new QuestionnaireDAL()
             }.GetQuestionnaireByURLTitle(title));
+        }
+
+        [Route("~/api/questionnaires/{title}/id")]
+        [HttpGet("{title}")]
+        public async Task<ActionResult<long>> GetQuestionnaireIdByUrlTitle(string title)
+        {
+            return await Task.FromResult(new QuestionnaireBLL
+            {
+                QuestionnaireDAL = new QuestionnaireDAL()
+            }.GetQuestionnaireIdByURLTitle(title));
         }
 
         [Route("~/api/questionnaires/id/{id}")]

@@ -8,7 +8,9 @@ namespace CATlinBE.Entities
         public string Title { get; set; }
         public string Subject { get; set; }
         public string Description { get; set; }
+        public string ShortDescription { get; set; }
         public string URLTitle { get; set; }
+        public long ImageId { get; set; }
 
         public IEnumerable<Question> Questions { get; set; }
     }

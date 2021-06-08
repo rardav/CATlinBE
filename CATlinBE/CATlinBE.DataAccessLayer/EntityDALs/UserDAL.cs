@@ -32,9 +32,9 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
                     FirstName = reader["FirstName"].ToString(),
                     LastName = reader["LastName"].ToString(),
                     PasswordHash = (byte[])reader["PasswordHash"],
-                    PasswordSalt = (byte[])reader["PasswordSalt"]
+                    PasswordSalt = (byte[])reader["PasswordSalt"],
                 //InstitutionId = Convert.ToInt64(reader["InstitutionId"].ToString()),
-                //RoleId = Convert.ToInt64(reader["RoleId"].ToString())
+                    RoleId = Convert.ToInt64(reader["RoleId"].ToString())
             };
                    
                 users.Add(user);
@@ -118,7 +118,7 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
                 user.PasswordHash = (byte[])reader["PasswordHash"];
                 user.PasswordSalt = (byte[])reader["PasswordSalt"];
                 //InstitutionId = Convert.ToInt64(reader["InstitutionId"].ToString()),
-                //RoleId = Convert.ToInt64(reader["RoleId"].ToString())
+                user.RoleId = Convert.ToInt64(reader["RoleId"].ToString());
             }
 
             return user;
@@ -146,7 +146,7 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
                 user.PasswordHash = (byte[])reader["PasswordHash"];
                 user.PasswordSalt = (byte[])reader["PasswordSalt"];
                 //InstitutionId = Convert.ToInt64(reader["InstitutionId"].ToString()),
-                //RoleId = Convert.ToInt64(reader["RoleId"].ToString())
+                user.RoleId = Convert.ToInt64(reader["RoleId"].ToString());
             }
 
             return user;

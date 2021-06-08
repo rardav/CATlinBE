@@ -19,6 +19,16 @@ namespace CATlinBE.WebApi.Controllers.EntitiesControllers
             }.GetAllIndividualSessionsFromUser(id));
         }
 
+        [Route("~/api/sessions/{id}/individualsessions")]
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<IndividualSession>>> GetIndividualSessionsFromSession(long id)
+        {
+            return await Task.FromResult(new IndividualSessionBLL
+            {
+                IndividualSessionDAL = new IndividualSessionDAL()
+            }.GetAllIndividualSessionsFromSession(id));
+        }
+
         [Route("~/api/sessions/{sessionId}/users/{userId}/individualsessions/id")]
         [HttpGet]
         public async Task<ActionResult<long>> GetIdOfIndividualSession(long sessionId, long userId)

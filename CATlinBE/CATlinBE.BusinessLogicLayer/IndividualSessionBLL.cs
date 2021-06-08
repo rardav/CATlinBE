@@ -24,6 +24,11 @@ namespace CATlinBE.BusinessLogicLayer
             return IndividualSessionDAL.GetAllIndividualSessionsFromUser(userId);
         }
 
+        public List<IndividualSession> GetAllIndividualSessionsFromSession(long sessionId)
+        {
+            return IndividualSessionDAL.GetAllIndividualSessionsFromSession(sessionId);
+        }
+
         public long GetIdOfIndividualSession(long sessionId, long userId)
         {
             return IndividualSessionDAL.GetIdOfIndividualSession(sessionId, userId);

@@ -70,6 +70,9 @@ namespace CATlinBE.WebApi.Controllers
             return new UserDTO
             {
                 Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                RoleId = user.RoleId,
                 Token = _tokenService.CreateToken(user)
             };
 
