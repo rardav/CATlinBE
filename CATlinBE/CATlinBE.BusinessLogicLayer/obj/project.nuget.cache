@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2Cf7w8sJcpGzrGy62aIv2kXdGG4G6XPLbkL2v8NKHTKTNsAqf5pv2DNoBnfV0SDFPljCk2Go4OMKeQmFay4r/g==",
+  "dgSpecHash": "01ORcgFTsa+w07rYKr0Y1wG/lEA9KM4lG+3Urn2Xav+JCP3zELikmA9MOKRm6dL75960LFvKmfKg2XwiOV7u6g==",
   "success": true,
   "projectFilePath": "D:\\University\\LICENTA\\CATlinBE\\CATlinBE\\CATlinBE.BusinessLogicLayer\\CATlinBE.BusinessLogicLayer.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\david\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\david\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

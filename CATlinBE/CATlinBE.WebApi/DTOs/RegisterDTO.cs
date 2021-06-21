@@ -19,6 +19,9 @@ namespace CATlinBE.WebApi.DTOs
         public string LastName { get; set; }
 
         [Required]
+        public string Role { get; set; }
+
+        [Required]
         [StringLength(8, MinimumLength = 4)]
         public string Password { get; set; }
     }

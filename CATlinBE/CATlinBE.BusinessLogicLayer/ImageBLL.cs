@@ -12,5 +12,15 @@ namespace CATlinBE.BusinessLogicLayer
         {
             return ImageDAL.GetImageById(imageId);
         }
+
+        public long GetIdByUrl(string url)
+        {
+            return ImageDAL.GetIdByUrl(url);
+        }
+
+        public void InsertImage(Image image)
+        {
+            ImageDAL.InsertImage(image);
+        }
     }
 }

@@ -80,7 +80,7 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
 
         public void RegisterUser(User user)
         {
-            var SQL = "INSERT INTO Users (Email, FirstName, LastName, PasswordHash, PasswordSalt) VALUES (@Email, @FirstName, @LastName, @PasswordHash, @PasswordSalt)";
+            var SQL = "INSERT INTO Users (Email, FirstName, LastName, RoleId, PasswordHash, PasswordSalt) VALUES (@Email, @FirstName, @LastName, @RoleId, @PasswordHash, @PasswordSalt)";
 
             using var sqlConn = GetSqlConnection();
             using var sqlCmd = GetSqlCommand(SQL, sqlConn);
@@ -90,6 +90,7 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
             sqlCmd.Parameters.Add("@Email", SqlDbType.VarChar).Value = user.Email;
             sqlCmd.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = user.FirstName;
             sqlCmd.Parameters.Add("@LastName", SqlDbType.VarChar).Value = user.LastName;
+            sqlCmd.Parameters.Add("@RoleId", SqlDbType.Int).Value = user.RoleId;
             sqlCmd.Parameters.Add("@PasswordHash", SqlDbType.VarBinary).Value = user.PasswordHash;
             sqlCmd.Parameters.Add("@PasswordSalt", SqlDbType.VarBinary).Value = user.PasswordSalt;
 

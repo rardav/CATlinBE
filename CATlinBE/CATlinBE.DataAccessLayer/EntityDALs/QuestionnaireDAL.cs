@@ -28,9 +28,12 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
                     Id = Convert.ToInt64(reader["Id"].ToString()),
                     Title = reader["Title"].ToString(),
                     Description = reader["Description"].ToString(),
+                    ShortDescription = reader["ShortDescription"].ToString(),
                     Subject = reader["Subject"].ToString(),
                     URLTitle = reader["URLTitle"].ToString(),
-                    ImageId = reader.IsDBNull("ImageId")? 0 : Convert.ToInt64(reader["ImageId"].ToString())
+                    ImageId = reader.IsDBNull("ImageId")? 0 : Convert.ToInt64(reader["ImageId"].ToString()),
+
+
                 };
                 questionnaires.Add(questionnaire);
             }
@@ -55,6 +58,7 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
                 questionnaire.Id = Convert.ToInt64(reader["Id"].ToString());
                 questionnaire.Title = reader["Title"].ToString();
                 questionnaire.Description = reader["Description"].ToString();
+                questionnaire.ShortDescription = reader["ShortDescription"].ToString();
                 questionnaire.Subject = reader["Subject"].ToString();
                 questionnaire.URLTitle = reader["URLTitle"].ToString();
                 questionnaire.ImageId = reader.IsDBNull("ImageId") ? 0 : Convert.ToInt64(reader["ImageId"].ToString());
@@ -80,6 +84,7 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
                 questionnaire.Id = Convert.ToInt64(reader["Id"].ToString());
                 questionnaire.Title = reader["Title"].ToString();
                 questionnaire.Description = reader["Description"].ToString();
+                questionnaire.ShortDescription = reader["ShortDescription"].ToString();
                 questionnaire.Subject = reader["Subject"].ToString();
                 questionnaire.URLTitle = reader["URLTitle"].ToString();
                 questionnaire.ImageId = reader.IsDBNull("ImageId") ? 0 : Convert.ToInt64(reader["ImageId"].ToString());

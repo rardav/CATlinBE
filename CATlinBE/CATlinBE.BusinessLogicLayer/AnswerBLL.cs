@@ -22,5 +22,20 @@ namespace CATlinBE.BusinessLogicLayer
         {
             AnswerDAL.InsertJSON(answers);
         }
+
+        public void InsertAnswer(Answer answer)
+        {
+            AnswerDAL.InsertAnswer(answer);
+        }
+
+        public void UpdateAnswer(Answer answer)
+        {
+            AnswerDAL.UpdateAnswer(answer);
+        }
+
+        public void DeleteAnswer(long questionId)
+        {
+            AnswerDAL.DeleteAnswer(questionId);
+        }
     }
 }

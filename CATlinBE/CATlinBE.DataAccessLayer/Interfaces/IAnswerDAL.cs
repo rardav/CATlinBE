@@ -8,5 +8,8 @@ namespace CATlinBE.DataAccessLayer.Interfaces
         List<Answer> GetAllAnswersFromQuestion(long questionId);
         List<Answer> GetAllAnswers();
         void InsertJSON(List<Answer> answers);
+        void InsertAnswer(Answer answer);
+        void UpdateAnswer(Answer answer);
+        void DeleteAnswer(long questionId);
     }
 }

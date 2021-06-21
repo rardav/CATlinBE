@@ -61,13 +61,46 @@ namespace CATlinBE.WebApi.Controllers.EntitiesControllers
             return answersDTO;
         }
 
+        //[HttpPost]
+        //public void InsertJson(List<Answer> answers)
+        //{
+        //    new AnswerBLL
+        //    {
+        //        AnswerDAL = new AnswerDAL()
+        //    }.InsertJSON(answers);
+        //}
+
         [HttpPost]
-        public void InsertJson(List<Answer> answers)
+        public async Task<ActionResult> InsertAnswer(Answer answer)
         {
-            new AnswerBLL
+            await Task.Run(() => new AnswerBLL
             {
                 AnswerDAL = new AnswerDAL()
-            }.InsertJSON(answers);
+            }.InsertAnswer(answer));
+
+            return Ok();
+        }
+
+        [HttpPut]
+        public async Task<ActionResult> UpdateAnswer(Answer answer)
+        {
+            await Task.Run(() => new AnswerBLL
+            {
+                AnswerDAL = new AnswerDAL()
+            }.UpdateAnswer(answer));
+
+            return Ok();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteAnswer(long id)
+        {
+            await Task.Run(() => new AnswerBLL
+            {
+                AnswerDAL = new AnswerDAL()
+            }.DeleteAnswer(id));
+
+            return Ok();
         }
     }
 }

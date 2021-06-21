@@ -30,5 +30,43 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
 
             return image;
         }
+
+        public void InsertImage(Image image)
+        {
+            var SQL = "INSERT INTO Images (Url, PublicId) VALUES (@Url, @PublicId)";
+
+            using var sqlConn = GetSqlConnection();
+            using var sqlCmd = GetSqlCommand(SQL, sqlConn);
+
+            sqlConn.Open();
+
+            sqlCmd.Parameters.Add("@Url", SqlDbType.NVarChar).Value = image.Url;
+            sqlCmd.Parameters.Add("@PublicId", SqlDbType.NVarChar).Value = image.PublicId;
+
+            sqlCmd.ExecuteNonQuery();
+
+            sqlConn.Close();
+        }
+
+        public long GetIdByUrl(string url)
+        {
+            var SQL = "SELECT Id FROM Images WHERE PublicId = @url";
+
+            using var sqlConn = GetSqlConnection();
+            using var sqlCmd = GetSqlCommand(SQL, sqlConn);
+
+            sqlCmd.Parameters.Add("url", SqlDbType.VarChar).Value = url;
+            sqlConn.Open();
+
+            using var reader = sqlCmd.ExecuteReader();
+            long id = 0;
+            while (reader.Read())
+            {
+                id = Convert.ToInt64(reader["Id"].ToString());
+            }
+
+            sqlConn.Close();
+            return id;
+        }
     }
 }

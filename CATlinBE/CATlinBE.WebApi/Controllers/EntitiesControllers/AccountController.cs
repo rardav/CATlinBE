@@ -22,16 +22,21 @@ namespace CATlinBE.WebApi.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<UserDTO>> Register(RegisterDTO registerDTO)
         {
-            if (await UserExists(registerDTO.Email)) return BadRequest("This email address is alrady registered.");
+            if (await UserExists(registerDTO.Email)) return BadRequest("This email address is already registered.");
 
 
             using var hmac = new HMACSHA512();
 
+            long role = 0;
+            if (registerDTO.Role == "Examinee") role = 1;
+            if (registerDTO.Role == "Supervisor") role = 2;
+            if (registerDTO.Role == "Administrator") role = 10002;
             var user = new User
             {
                 Email = registerDTO.Email,
                 FirstName = registerDTO.FirstName,
                 LastName = registerDTO.LastName,
+                RoleId = role,
                 PasswordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(registerDTO.Password)),
                 PasswordSalt = hmac.Key
             };

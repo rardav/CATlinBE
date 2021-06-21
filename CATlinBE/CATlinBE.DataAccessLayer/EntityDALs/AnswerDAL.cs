@@ -64,6 +64,58 @@ namespace CATlinBE.DataAccessLayer.EntityDALs
             return answers;
         }
 
+        public void InsertAnswer(Answer answer)
+        {
+            var SQL = "INSERT INTO answers(text, questionId, isCorrect) VALUES (@text, @questionId, @isCorrect)";
+
+            using var sqlConn = GetSqlConnection();
+            using var sqlCmd = GetSqlCommand(SQL, sqlConn);
+
+            sqlCmd.Parameters.Add("text", SqlDbType.NVarChar, -1).Value = answer.Text;
+            sqlCmd.Parameters.Add("questionId", SqlDbType.BigInt).Value = answer.QuestionId;
+            sqlCmd.Parameters.Add("isCorrect", SqlDbType.Int).Value = answer.IsCorrect;
+            sqlConn.Open();
+
+            sqlCmd.ExecuteNonQuery();
+            sqlConn.Close();
+        }
+
+        public void UpdateAnswer(Answer answer)
+        {
+            var SQL = "UPDATE Answers " +
+                "SET Text=@text " +
+                "WHERE Id = @id";
+
+            using var sqlConn = GetSqlConnection();
+            using var sqlCmd = GetSqlCommand(SQL, sqlConn);
+
+            sqlConn.Open();
+
+            sqlCmd.Parameters.Add("@id", SqlDbType.BigInt).Value = answer.Id;
+            sqlCmd.Parameters.Add("@text", SqlDbType.NVarChar).Value = answer.Text;
+
+            sqlCmd.ExecuteNonQuery();
+
+            sqlConn.Close();
+        }
+
+        public void DeleteAnswer(long questionId)
+        {
+            var SQL = "DELETE FROM Answers " +
+                "WHERE QuestionId = @questionId";
+
+            using var sqlConn = GetSqlConnection();
+            using var sqlCmd = GetSqlCommand(SQL, sqlConn);
+
+            sqlConn.Open();
+
+            sqlCmd.Parameters.Add("@questionId", SqlDbType.BigInt).Value = questionId;
+
+            sqlCmd.ExecuteNonQuery();
+
+            sqlConn.Close();
+        }
+
         //to delete
         public void InsertJSON(List<Answer> answers)
         {
